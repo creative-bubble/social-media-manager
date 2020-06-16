@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\marco\\applications\\computer files\\dotnet_applications\\HelloWorld!\\HelloWorld\\HelloWorld\\HelloWorld.csproj",
+      "projectUniqueName": "D:\\marco\\applications\\computer files\\dotnet_applications\\HelloWorld\\HelloWorld\\HelloWorld\\HelloWorld.csproj",
       "projectName": "HelloWorld",
-      "projectPath": "D:\\marco\\applications\\computer files\\dotnet_applications\\HelloWorld!\\HelloWorld\\HelloWorld\\HelloWorld.csproj",
+      "projectPath": "D:\\marco\\applications\\computer files\\dotnet_applications\\HelloWorld\\HelloWorld\\HelloWorld\\HelloWorld.csproj",
       "packagesPath": "C:\\Users\\Theoa\\.nuget\\packages\\",
-      "outputPath": "D:\\marco\\applications\\computer files\\dotnet_applications\\HelloWorld!\\HelloWorld\\HelloWorld\\obj\\",
+      "outputPath": "D:\\marco\\applications\\computer files\\dotnet_applications\\HelloWorld\\HelloWorld\\HelloWorld\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Theoa\\AppData\\Roaming\\NuGet\\NuGet.Config",
