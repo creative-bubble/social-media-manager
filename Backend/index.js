@@ -22,24 +22,24 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(homeRoutes);
 
-sequelize
-.sync()
-.then(() => {
-    return User.findByPk(1);
-})
-.then(user => {
-    if(!user){
-        return User.create({
-            name: "Marco",
-            email: "marobutalid989@gmail.com"
-        });
-    }
-    return user;
-})
-.then(() => {
+// sequelize
+// .sync()
+// .then(() => {
+//     return User.findByPk(1);
+// })
+// .then(user => {
+//     if(!user){
+//         return User.create({
+//             name: "Marco",
+//             email: "marobutalid989@gmail.com"
+//         });
+//     }
+//     return user;
+// })
+// .then(() => {
     app.listen(9000);
-})
-.catch(err => {
-    console.log(err);
-})
+// })
+// .catch(err => {
+//     console.log(err);
+// })
 
