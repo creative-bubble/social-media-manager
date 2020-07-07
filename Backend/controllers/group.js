@@ -13,10 +13,10 @@ exports.postAddGroup = (req, res) => {
         return Group.create({
             name: name
         })
-        .then(group => {
-           return res.send(group);
-        })
     })
+    .then(group => {
+        return res.send(group);
+     })
     .catch(err => {
         return res.send(err)
     })
@@ -33,7 +33,7 @@ exports.getGroups = (req, res) => {
 };
 
 
-exports.postUpdateGroup = (req, res) => {
+exports.putGroup = (req, res) => {
     let groupId = req.params.groupId;
     let name = req.params.newName;
     return Group.findByPk(groupId)

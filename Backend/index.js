@@ -11,6 +11,7 @@ const User = require('./models/user');
 //routes
 const homeRoutes = require('./routes/home');
 const groupRoutes = require('./routes/group');
+const roleRoutes = require('./routes/roles');
 //swagger documentation
 const swaggerJSDoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
@@ -55,6 +56,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 //middleware routes
 app.use(homeRoutes);
 app.use(groupRoutes);
+app.use(roleRoutes);
+
 
 //Associations
 associations();

@@ -34,7 +34,7 @@ router.get('/group', groupController.getGroups);
 
 /**
  * @swagger
- * /update-group/{id}/{name}:
+ * /group-update/{id}/{name}:
  *           put:
  *              description: request to update a group
  *              parameters:
@@ -50,12 +50,12 @@ router.get('/group', groupController.getGroups);
  *                '203':
  *                   description: Updated the group Successfuly
  */
-router.put('/update-group/:groupId/:newName', groupController.postUpdateGroup);
+router.put('/group-update/:groupId/:newName', groupController.putGroup);
 
 
 /**
  * @swagger
- * /delete-group/{id}:
+ * /group-delete/{id}:
  *        delete:
  *              description: request to delete a group
  *              parameters:
@@ -67,7 +67,7 @@ router.put('/update-group/:groupId/:newName', groupController.postUpdateGroup);
  *                 '204':
  *                    description: Successfuly deleted the group
  */
-router.delete('/delete-group/:groupId', groupController.deleteGroup);
+router.delete('/group-delete/:groupId', groupController.deleteGroup);
 
 
 
