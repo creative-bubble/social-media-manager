@@ -6,7 +6,8 @@ RUN apt-get update -y && \
     apt-get upgrade -y && \ 
     apt-get install nodejs -y && \ 
     apt-get install npm -y && \
-    npm install 
+    npm install && \ 
+    cd .. && cd Backend && npm install && cd .. 
 
 EXPOSE 80
 CMD npm start
