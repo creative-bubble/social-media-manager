@@ -1,38 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Home from './containers/home';
+import Navbar from './components/navbar';
+import Footer from './components/footer';
 
-class App extends React.Component{
-  constructor(props){
-    super(props);
-    this.state = {apiResponse: ""};
-  }
-
-  callAPI(){
-    fetch("http://localhost:9000/")
-    .then(res => {
-      return res.text();
-    })
-    .then(res => {
-      let user = JSON.parse(res);
-      this.setState({apiResponse: user})
-    })
-  }
-
-  componentWillMount(){
-    this.callAPI();
-  }
-
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-        </header>
-      <p>Hello {this.state.apiResponse.name}</p>
+function mainApp(){
+  return(
+    <>
+      <Navbar />
+      <Home />
+      <div class="h-88">
+        {/* contact us here to-follow*/}
       </div>
-    );
-  }
+      <Footer />
+    </>
+  )
 }
 
-export default App;
+export default mainApp;
