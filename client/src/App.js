@@ -1,17 +1,17 @@
 import React from 'react';
 import './App.css';
 import Home from './containers/home';
-import Navbar from './components/navbar';
-import Footer from './components/footer';
+import Navbar from './components/mainComponents/navbar';
+import Contact from './components/mainComponents/contact';
+import Footer from './components/mainComponents/footer';
 
 function mainApp(){
   return(
     <>
       <Navbar />
       <Home />
-      <div class="h-88">
-        {/* contact us here to-follow*/}
-      </div>
+      <Contact />
+      <br />
       <Footer />
     </>
   )

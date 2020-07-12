@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from '../../components/card';
+import Card from '../../components/miniComponents/card';
 
 function Home(){
     return(
@@ -20,9 +20,9 @@ function Home(){
                 </div>
             </div>
         </div> {/* End of CTO */}
-        <div class="mt-1 lg:mt-48">
+        <div class="mt-1 md:mt-8 lg:mt-32">
             <div class="w-9/12 mx-auto">
-                <div class="flex justify-center pt-12">
+                <div class="flex justify-center pt-12 sm:pt-0">
                     <h2 class="font-Bebas text-2xl text-purple-900">Our Services</h2>
                 </div>
                 <div class="mt-2 flex flex-col sm:flex-row sm:justify-around sm:mt-6 ">
