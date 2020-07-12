@@ -1,18 +1,21 @@
 import React from 'react';
-import './App.css';
-import Home from './containers/home';
 import Navbar from './components/mainComponents/navbar';
-import Contact from './components/mainComponents/contact';
+import Routes from  './routes';
 import Footer from './components/mainComponents/footer';
+import {BrowserRouter as Router} from 'react-router-dom';
 
 function mainApp(){
   return(
     <>
-      <Navbar />
-      <Home />
-      <Contact />
-      <br />
-      <Footer />
+      <div id="page-container" className="w-full m-0 p-0 bg-gray-100 grid grid-cols-1">
+          <div id="main-content" className="min-h-screen">
+              <Router>
+                  <Navbar />
+                  <Routes />
+              </Router>
+          </div>
+          <Footer />
+      </div>
     </>
   )
 }
