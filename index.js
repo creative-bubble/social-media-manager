@@ -54,35 +54,19 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 //middleware routes
+app.use(homeRoutes);
+app.use(groupRoutes);
+app.use(roleRoutes);
 app.use('/', (req,res) => {
     res.send("<h1> Welcome</h1>");
     res.end();
 })
-app.use(homeRoutes);
-app.use(groupRoutes);
-app.use(roleRoutes);
 
 
 //Associations
 associations();
 
 
-
-//init server
-// sequelize
-// .sync()
-// .then(res => {
-//     let port = process.env.PORT;
-//     if (port == null || port == "") {
-//     port = 8000;
-// }
-//     app.listen(port, () => {
-//         console.log(`Server listening on ${port}`)
-//     })
-// })
-// .catch(err => {
-//     console.log(err);
-// })
 
 sequelize
 // .sync({force:true})
