@@ -54,6 +54,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 //middleware routes
+app.use('/', (req,res) => {
+    res.send("<h1> Welcome</h1>");
+    res.end();
+})
 app.use(homeRoutes);
 app.use(groupRoutes);
 app.use(roleRoutes);
