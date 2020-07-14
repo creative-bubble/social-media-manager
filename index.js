@@ -74,6 +74,10 @@ app.use('/', (req,res) => {
 sequelize
 .sync()
 .then(res => {
+    let port = process.env.PORT;
+    if (port == null || port == "") {
+    port = 8000;
+}
     app.listen(port, () => {
         console.log(`Server listening on ${port}`)
     })
@@ -81,8 +85,6 @@ sequelize
 .catch(err => {
     console.log(err);
 })
-
-
 
 // sequelize
 // // // .sync({force:true})
