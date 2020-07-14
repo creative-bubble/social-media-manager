@@ -57,10 +57,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(homeRoutes);
 app.use(groupRoutes);
 app.use(roleRoutes);
-app.use('/', (req,res) => {
-    res.send("<h1> Welcome</h1>");
-    res.end();
-})
 
 
 //Associations
