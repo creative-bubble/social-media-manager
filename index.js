@@ -52,10 +52,11 @@ app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
 
-
+const num;
 //middleware routes
 app.use('/', (req,res) => {
     res.send("<h1> Welcome</h1>");
+    res.send(num);
     res.end();
 })
 // app.use(homeRoutes);
@@ -76,6 +77,7 @@ sequelize
     if (port == null || port == "") {
     port = 8000;
 }
+    num = 2;
     app.listen(port, () => {
         console.log(`Server listening on ${port}`)
     })
