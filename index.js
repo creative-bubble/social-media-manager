@@ -69,8 +69,6 @@ app.use('/', (req,res) => {
 
 
 //init server
-
-
 sequelize
 .sync()
 .then(res => {
