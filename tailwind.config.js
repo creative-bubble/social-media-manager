@@ -9,6 +9,8 @@ module.exports = {
         '101': '28rem',
         '102': '30rem',
         '103': '35rem',
+        '10vh': '10vh',
+        '90vh': '90vh',
       },
       fontFamily: {
         Bebas: ['Bebas Neue']
@@ -16,8 +18,8 @@ module.exports = {
     },
   },
   variants: {
-    backgroundColor: ['active', 'focus'],
-    borderColor: ['active', 'focus']
+    backgroundColor: ['responsive', 'active', 'hover','focus'],
+    borderColor: ['responsive','active', 'hover','focus']
   },
   plugins: [],
 }
