@@ -67,27 +67,27 @@ app.use(roleRoutes);
 associations();
 
 //init server
-sequelize
-// .sync({force:true})
-.sync()
-.then(() => {
-    return User.findByPk(1);
-})
-.then(user => {
-    if(!user){
-        return User.create({
-            name: "Marco",
-            email: "marobutalid989@gmail.com"
-        });
-    }
-    return user;
-})
-.then(() => {
+// sequelize
+// // .sync({force:true})
+// .sync()
+// .then(() => {
+//     return User.findByPk(1);
+// })
+// .then(user => {
+//     if(!user){
+//         return User.create({
+//             name: "Marco",
+//             email: "marobutalid989@gmail.com"
+//         });
+//     }
+//     return user;
+// })
+// .then(() => {
     app.listen(port, () => {
         console.log(`Server listening on ${port}`)
     });
-})
-.catch(err => {
-    console.log(err);
-})
+// })
+// .catch(err => {
+//     console.log(err);
+// })
 
