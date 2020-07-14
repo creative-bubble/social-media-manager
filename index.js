@@ -5,13 +5,13 @@ const path = require('path');
 const cors = require('cors');
 //local modules
 const sequelize = require('./util/database');
-const associations = require('./util/association');
+// const associations = require('./util/association');
 //models
-const User = require('./models/user');
-//routes
-const homeRoutes = require('./routes/home');
-const groupRoutes = require('./routes/group');
-const roleRoutes = require('./routes/roles');
+// const User = require('./models/user');
+// //routes
+// const homeRoutes = require('./routes/home');
+// const groupRoutes = require('./routes/group');
+// const roleRoutes = require('./routes/roles');
 //swagger documentation
 const swaggerJSDoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
@@ -58,36 +58,54 @@ app.use('/', (req,res) => {
     res.send("<h1> Welcome</h1>");
     res.end();
 })
-app.use(homeRoutes);
-app.use(groupRoutes);
-app.use(roleRoutes);
+// app.use(homeRoutes);
+// app.use(groupRoutes);
+// app.use(roleRoutes);
 
 
 //Associations
-associations();
+// associations();
+
+
 
 //init server
-// sequelize
-// // .sync({force:true})
-// .sync()
-// .then(() => {
-//     return User.findByPk(1);
-// })
-// .then(user => {
-//     if(!user){
-//         return User.create({
-//             name: "Marco",
-//             email: "marobutalid989@gmail.com"
-//         });
-//     }
-//     return user;
-// })
-// .then(() => {
+
+
+sequelize
+.sync()
+.then(res => {
     app.listen(port, () => {
         console.log(`Server listening on ${port}`)
-    });
+    })
+})
+.catch(err => {
+    console.log(err);
+})
+
+
+
+// sequelize
+// // // .sync({force:true})
+// // .sync()
+// // .then(() => {
+// //     return User.findByPk(1);
+// // })
+// // .then(user => {
+// //     if(!user){
+// //         return User.create({
+// //             name: "Marco",
+// //             email: "marobutalid989@gmail.com"
+// //         });
+// //     }
+// //     return user;
+// // })
+// .then(() => {
+//     app.listen(port, () => {
+//         console.log(`Server listening on ${port}`)
+//     });
 // })
 // .catch(err => {
+//     console.log(sequelize);
 //     console.log(err);
-// })
+// });
 
