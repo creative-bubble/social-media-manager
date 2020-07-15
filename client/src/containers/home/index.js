@@ -30,7 +30,7 @@ function Home(){
                         <div className="flex justify-center pt-12 sm:pt-0">
                             <h2 className="font-Bebas text-2xl text-purple-900">Our Services</h2>
                         </div>
-                        <div class="mt-2 flex flex-col sm:flex-row sm:justify-around sm:mt-6 ">
+                        <div className="mt-2 flex flex-col sm:flex-row sm:justify-around sm:mt-6 ">
                             <Card>
                                 <img className="sm:absolute h-full w-full object-contain" src={require("../../img/1imgService.svg")} alt="media1" />
                             </Card>
