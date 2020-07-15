@@ -8,17 +8,17 @@ exports.postAddGroup = (req, res) => {
     .then(groups => {
         if(groups.length > 0)
         {
-            return res.send('Group already exist')
+            return res.send(JSON.stringify({type: 'exist', message: 'group already exist'}));
         }
         return Group.create({
             name: name
         })
     })
     .then(group => {
-        return res.send(group);
+        return res.send(JSON.stringify({type: 'success', name: group.name, message: 'Created successfuly'}));
      })
     .catch(err => {
-        return res.send(err)
+        return res.send(JSON,stringify(err))
     })
 };
 
