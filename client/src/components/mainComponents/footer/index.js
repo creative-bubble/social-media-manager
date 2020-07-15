@@ -7,7 +7,7 @@ function Footer(){
                 <div className="relative h-48">
                     <div className="absolute w-full h-32 mt-0 pt-6 text-xs text-gray-200 lg:w-8/12 lg:h-40 lg:text-md leading-loose">
                         <div className="flex flex-row">
-                            <div><span className="font-bold">|</span> <span class="font-bold"> Contact Info</span></div>
+                            <div><span className="font-bold">|</span> <span className="font-bold"> Contact Info</span></div>
                             <div>
                                 <i className="fa fa-instagram text-green-500 px-2" aria-hidden="true"></i>
                                 <i className="fa fa-facebook-official text-green-500 px-2" aria-hidden="true"></i>
