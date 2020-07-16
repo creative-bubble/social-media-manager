@@ -8,5 +8,5 @@ RUN apt-get update -y && \
     apt-get install npm -y && \
     npm install
 
-EXPOSE 80
+#EXPOSE 80
 CMD npm start
