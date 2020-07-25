@@ -17,13 +17,14 @@ it('Should create group expecting status code 201', async (done) => {
     done();
 })
 
-it('Response should status code 409 means group already exist', () => {
+it('Response should status code 409 means group already exist', async (done) => {
     let res = await request(app).post('/group')
     .send({
         name: "GroupTestExample"
     });
     expect(res.body).toHaveProperty('error');
     expect(res.statusCode).toEqual(409);
+    done();
 })
 
 
