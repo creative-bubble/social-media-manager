@@ -53,5 +53,9 @@ app.use(homeRoutes);
 app.use(groupRoutes);
 app.use(roleRoutes);
 
+app.use((err,req,res,next) => {
+    res.send(JSON.stringify(err));
+})
+
 
 module.exports = app;
