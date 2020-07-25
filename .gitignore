@@ -1,4 +1,4 @@
 #ignore node_modules
 /Backend/node_modules
-/Backend/.env
+/Backend/config/*.env
 /client/node_modules
