@@ -35,9 +35,6 @@ const swaggerDocs = swaggerJSDoc(swaggerOptions);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
 
-
-
-
 //middleware setups
 app.set('view engine', 'ejs');
 app.set('views', 'views');

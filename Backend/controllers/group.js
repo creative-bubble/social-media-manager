@@ -2,25 +2,23 @@ const Group = require('../models/group');
 
 
 
-exports.postAddGroup = (req, res) => {
+exports.postAddGroup = async (req, res, next) => {
     let name = req.body.name;
-    Group.findAll({where:{name: name}})
-    .then(groups => {
-        if(groups.length > 0)
-        {
-            return res.send(JSON.stringify({type: 'exist', message: 'group already exist'}));
-        }
-        return Group.create({
-            name: name
-        })
+    let groups = await Group.findAll({where:{name:name}});
+    if(groups.length > 0)
+        return res.status(409).json({error: 'error', type: 'exist', message: 'group already exist'});
+    Group.create({
+        name:name
     })
     .then(group => {
-        return res.send(JSON.stringify({type: 'success', name: group.name, message: 'Created successfuly'}));
+        return res.status(201).send(JSON.stringify({type: 'success', name: group.name, message: 'Created successfuly'}));
      })
     .catch(err => {
-        return res.send(JSON,stringify(err))
+       next(err);
     })
 };
+
+
 
 exports.getGroups = (req, res) => {
     return Group.findAll()
