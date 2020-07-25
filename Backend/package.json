@@ -34,9 +34,10 @@
   "devDependencies": {
     "env-cmd": "^8.0.2",
     "jest": "^26.1.0",
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "supertest": "^4.0.2"
   },
-  "jest":{
+  "jest": {
     "testEnvironment": "node",
     "coveragePathIgnorePattern": [
       "/node_modules"
