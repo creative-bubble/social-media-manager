@@ -35,5 +35,11 @@
     "env-cmd": "^8.0.2",
     "jest": "^26.1.0",
     "nodemon": "^2.0.4"
+  },
+  "jest":{
+    "testEnvironment": "node",
+    "coveragePathIgnorePattern": [
+      "/node_modules"
+    ]
   }
 }
