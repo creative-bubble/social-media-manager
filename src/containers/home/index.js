@@ -18,7 +18,7 @@ function Home(){
                             </div>
                         </div>
                         <div className="w-5/12 h-76 absolute right-0 top-0 hidden lg:block md:mt-10">
-                            <img className="object-containt" src={require("../../img/img1.svg")} alt="media2" />
+                            <img className="object-contain" src={require("../../img/img1.svg")} alt="media2" />
                         </div>
                     </div>
                 </div> {/* End of CTO */}
