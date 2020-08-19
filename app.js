@@ -3,11 +3,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const cors = require('cors');
-//local modules
-const sequelize = require('./util/database');
-const associations = require('./util/association');
-//models
-const User = require('./models/user');
 //routes
 const homeRoutes = require('./routes/home');
 const groupRoutes = require('./routes/group');
@@ -19,7 +14,7 @@ const swaggerUi = require('swagger-ui-express');
 //variables
 const app = express();
 require('dotenv').config();
-let port = process.env.PORT || 5000;
+let port = process.env.PORT || 9000;
 
 //swagger configuration
 const swaggerOptions = {
@@ -39,10 +34,6 @@ const swaggerOptions = {
 const swaggerDocs = swaggerJSDoc(swaggerOptions);
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
-
-
-
-
 //middleware setups
 app.set('view engine', 'ejs');
 app.set('views', 'views');
@@ -51,39 +42,14 @@ app.use(cors());
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-
 //middleware routes
 app.use(homeRoutes);
 app.use(groupRoutes);
 app.use(roleRoutes);
 
-
-//Associations
-associations();
-
-//init server
-sequelize
-// .sync({force:true})
-.sync()
-.then(() => {
-    return User.findByPk(1);
-})
-.then(user => {
-    if(!user){
-        return User.create({
-            name: "Marco",
-            email: "marobutalid989@gmail.com"
-        });
-    }
-    return user;
-})
-.then(() => {
-    app.listen(port, () => {
-        console.log(`Server listening on ${port}`)
-    });
-})
-.catch(err => {
-    console.log(err);
+app.use((err,req,res,next) => {
+    res.send(JSON.stringify(err));
 })
 
+
+module.exports = app;
