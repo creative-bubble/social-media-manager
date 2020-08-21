@@ -2,7 +2,6 @@ import React from 'react';
 import {Switch, Route } from 'react-router-dom';
 import Home from '../../pages/home';
 import Footer from '../../layout/footer';
-import Controls from '../../pages/controls/main';
 import ControlRoutes from '../controls'
 
 function Routes(){
@@ -14,9 +13,6 @@ function Routes(){
                     <Home />
                 </div>
                 <Footer />
-            </Route>
-            <Route path='/controls'>
-                <Controls />
             </Route>
             
             {/* Control Routes */}
