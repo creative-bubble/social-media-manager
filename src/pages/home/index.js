@@ -1,6 +1,6 @@
 import React from 'react';
-import Card from '../../elements/card';
-import Contact from '../../components/mainComponents/contact';
+import Card from '../../elements/card/index';
+import Contact from '../../layout/contact/index';
 
 function Home(){
     return(

@@ -1,5 +1,5 @@
 import React from 'react';
-import Input from '../../miniComponents/input';
+import Input from '../../elements/input';
 
 function Contact(){
     return(
@@ -22,7 +22,7 @@ function Contact(){
                     </div>
                 </div>
                 <div className="absolute bottom-0 right-0 w-6/12 h-64 mx-auto hidden md:block">
-                      <img className="h-full w-full object-contain" src={require("../../../img/contact.svg")} alt="media1" />
+                      <img className="h-full w-full object-contain" src={require("../../img/contact.svg")} alt="media1" />
                 </div>
             </div>
       </div>

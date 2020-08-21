@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-import Group from '../../containers/controls/group';
+import Group from '../../pages/controls/group';
 
 
 function ControlRoutes(){
