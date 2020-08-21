@@ -1,5 +1,5 @@
 import React from 'react';
-import Card from '../../components/miniComponents/card';
+import Card from '../../elements/card';
 import Contact from '../../components/mainComponents/contact';
 
 function Home(){

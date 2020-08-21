@@ -1,7 +1,7 @@
 import React from 'react';
 import {Switch, Route } from 'react-router-dom';
 import Home from '../../containers/home';
-import Footer from '../../components/mainComponents/footer';
+import Footer from '../../layout/footer';
 import Controls from '../../containers/controls/main';
 import ControlRoutes from '../controls'
 
