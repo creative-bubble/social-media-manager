@@ -1,11 +1,13 @@
 import React from 'react';
+import Navbar from '../../../layout/navbar/index';
 import DashBarLinks from './dashboard-bar';
 
 function Controls(prop){
     const [isOpenNav, toggleNav] = React.useReducer(isOpenNav => !isOpenNav, false);
     return(
         <>
-            <div className="flex flex-col md:flex-row h-90vh border-2 border-blue-500">
+            <Navbar />
+            <div className="flex flex-col md:flex-row h-90vh">
                 
                 <DashBarLinks  isOpenNav={isOpenNav} toggleNav={toggleNav}/>
 
