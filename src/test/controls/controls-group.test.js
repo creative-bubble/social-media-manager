@@ -4,7 +4,6 @@ import { renderWith, perform, renderHook } from '../helper/helper';
 //components of Group Content
 import CreateGroup from '../../pages/controls/group/components/create-group';
 import GroupController from '../../controllers/group';
-import { Hooks } from '../../pages/controls/group/actions';
 
 describe('Group Controls', () => {
 
@@ -39,7 +38,7 @@ describe('Group Controls', () => {
 
     describe('Components', () => {
         describe('Create-Group', () => {
-            it('Input group name then submit. should call postAddGroup controller', async () => {  // also covers the updateInputs case inside actions.js
+            it('Input group name then submit. should call postAddGroup controller', async () => {  // also covers the updateInputs case inside actions.js and calls postAddGroup controller
                 const spy = jest.spyOn(GroupController, 'postAddGroup').mockImplementation((inputs) => inputs);
                 const { getByLabelText, getByText } = render(<CreateGroup />);
                 //action
@@ -53,7 +52,7 @@ describe('Group Controls', () => {
     
 
         describe('GroupList', () => {
-            it('Click "Group List" should call getGroups controller', () => {
+            it('Click "Group List" should call getGroups controller', () => {       //covers the updateView case inside actions.js and calls getGroups controller
                 const spy = jest.spyOn(GroupController, 'getGroups').mockImplementation((setViewData) => 'mock');
                 const { getByText } = renderWith('/group');
                 //action
