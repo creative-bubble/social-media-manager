@@ -1,14 +1,11 @@
-import React, { useReducer, useState } from 'react';
+import React from 'react';
 import Controls from '../main';
 import GroupController from '../../../controllers/group.js';
 import { Hooks } from './hooks';
 
 
 function Group(){
-    const [isCreate,setCreate] = useReducer(isCreate =>  (!isCreate) , false);
-    const [view, setView] = useState(false);
-    const [viewData,setData] = useState([]);
-    const { inputs ,updateInputs } = Hooks();
+    const { inputs ,updateInputs, view, updateView, isCreate, setCreate, viewData } = Hooks();
     return(
         <>
         <Controls>
@@ -23,9 +20,7 @@ function Group(){
                             <i className="fa fa-plus pl-1" aria-hidden="true" /> Create Group
                         </button>
                         <button className="py-1 w-40 bg-gray-300 border-b border-gray-500 shadow-inner cursor-pointer text-left focus:outline-none"
-                                onClick={() => {
-                                    setView(!view)
-                                    return GroupController.getGroups(setData)}}>
+                                onClick={() => updateView()}>
                             <i className="fa fa-users pl-1" aria-hidden="true" /> Group List
                         </button>
                 </div>
