@@ -6,12 +6,11 @@ toast.configure();
 
 
 const GroupController = {
-    postAddGroup: function(btn) {
-        let data = btn.parentNode.querySelector('[name=groupName').value;
+    postAddGroup: function(inputs) {
         fetch('https://mediacloneapi.herokuapp.com/group', {
             method: 'POST', 
             headers:{'Content-Type': 'application/json'},
-            body: JSON.stringify({name: data})
+            body: JSON.stringify(inputs)
         })
         .then(res => {
             return res.json();

@@ -1,0 +1,343 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Controls Main View Click Group link button should render group content: Controls-Group-View 1`] = `
+<DocumentFragment>
+  <div
+    class="bg-gray-900"
+  >
+    <div
+      class="fixed w-full h-10vh pt-4 text-gray-300 bg-gray-900 z-10 flex flex-row sm:justify-center sm:relative sm:w-9/12 sm:mx-auto"
+      id="naver"
+    >
+      <div
+        class="ml-2 sm:ml-0 text-xs md:text-sm lg:text-lg sm:absolute sm:left-0"
+      >
+        #
+        <span
+          class="text-purple-600"
+        >
+          Social
+        </span>
+         Media Manager
+      </div>
+      <button
+        class="absolute right-0 top-0 mt-4 mx-4 z-10 sm:hidden border border-blue-500 text-blue-500 w-8 h-8 hover:bg-blue-500 hover:text-gray-200 focus:outline-none"
+      >
+        <i
+          aria-hidden="true"
+          class="fa fa-bars"
+        />
+      </button>
+      <div
+        class="sm:static sm:flex sm:pt-0"
+        id="nav-container"
+      >
+        <nav
+          class="text-gray-500 ml-2 sm:ml-0"
+        >
+          <ul
+            class="text-xs md:text-base sm:grid sm:grid-flow-col sm:gap-8"
+          >
+            <li
+              class="border-b border-gray-900 cursor-pointer rounded hover:bg-gray-800 sm:hover:bg-transparent sm:hover:border-green-500 sm:rounded-none"
+            >
+              <a
+                href="/"
+              >
+                Home
+              </a>
+            </li>
+            <li
+              class="mt-1 sm:mt-0 border-b border-gray-900 cursor-pointer rounded hover:bg-gray-800 sm:hover:bg-transparent sm:hover:border-green-500 sm:rounded-none"
+            >
+              <a
+                href="/group"
+              >
+                Media
+              </a>
+            </li>
+            <li
+              class="mt-1 sm:mt-0  border-b border-gray-900 cursor-pointer rounded hover:bg-gray-800 sm:hover:bg-transparent sm:hover:border-green-500 sm:rounded-none"
+            >
+              <a
+                href="/about"
+              >
+                About
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div
+        class="w-12 pl-2 sm:pl-0 sm:absolute sm:right-0"
+      >
+        <button
+          class="w-full border border-blue-500 bg-transparent text-blue-500 rounded-sm focus:outline-none hover:bg-blue-500 hover:text-gray-300"
+          data-testid="user-button"
+        >
+          USER
+        </button>
+      </div>
+    </div>
+    <div
+      class="block sm:hidden w-full h-10vh"
+    />
+  </div>
+  <div
+    class="flex flex-col md:flex-row h-90vh"
+  >
+    <div
+      class="md:hidden  w-full bg-gray-200 shadow-md"
+    >
+      <button
+        class="z-10 text-black w-12 h-12 hover:bg-gray-300 focus:outline-none"
+      >
+        <i
+          aria-hidden="true"
+          class="fa fa-bars"
+        />
+      </button>
+    </div>
+    <div
+      class="hidden w-full h-full md:block md:w-40 overflow-auto whitespace-no-wrap bg-gray-200 border shadow-inner"
+    >
+      <div
+        class="text-center pt-6"
+      >
+        <h2>
+          Dashboard
+        </h2>
+      </div>
+      <div
+        class="text-center pt-6"
+      >
+        <ul>
+          <li
+            class="block py-2 hover:bg-gray-300 hover:text-red-700"
+          >
+            <a
+              href="#home"
+            >
+              Organization
+            </a>
+          </li>
+          <li
+            class="block py-2 hover:bg-gray-300  hover:text-red-700"
+          >
+            <a
+              href="/group"
+            >
+              Groups
+            </a>
+          </li>
+          <li
+            class="block py-2 hover:bg-gray-300 hover:text-red-700"
+          >
+            <a
+              href="#home"
+            >
+              Roles
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="w-full h-full"
+    >
+      <div
+        class="relative flex flex-col w-full h-full overflow-auto whitespace-no-wrap bg-gray-200"
+      >
+        <div
+          class="w-6/12 ml-20 pt-10 border-b border-gray-500"
+        >
+          <h2
+            class="md:pl-6 pt-10  text-sm md:text-2xl lg:text-4xl"
+          >
+            Group Controls
+          </h2>
+        </div>
+        <div
+          class="relative w-full md:w-6/12 md:ml-20"
+        >
+          <div
+            class="flex flex-col md:pl-6 pt-16"
+          >
+            <button
+              class="py-1 w-40 bg-gray-300 border-b border-gray-500 shadow-inner cursor-pointer text-left focus:outline-none"
+            >
+              <i
+                aria-hidden="true"
+                class="fa fa-plus pl-1"
+              />
+               Create Group
+            </button>
+            <button
+              class="py-1 w-40 bg-gray-300 border-b border-gray-500 shadow-inner cursor-pointer text-left focus:outline-none"
+            >
+              <i
+                aria-hidden="true"
+                class="fa fa-users pl-1"
+              />
+               Group List
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Controls Main View Render Main view: Controls-Main-View 1`] = `
+<DocumentFragment>
+  <div
+    class="bg-gray-900"
+  >
+    <div
+      class="fixed w-full h-10vh pt-4 text-gray-300 bg-gray-900 z-10 flex flex-row sm:justify-center sm:relative sm:w-9/12 sm:mx-auto"
+      id="naver"
+    >
+      <div
+        class="ml-2 sm:ml-0 text-xs md:text-sm lg:text-lg sm:absolute sm:left-0"
+      >
+        #
+        <span
+          class="text-purple-600"
+        >
+          Social
+        </span>
+         Media Manager
+      </div>
+      <button
+        class="absolute right-0 top-0 mt-4 mx-4 z-10 sm:hidden border border-blue-500 text-blue-500 w-8 h-8 hover:bg-blue-500 hover:text-gray-200 focus:outline-none"
+      >
+        <i
+          aria-hidden="true"
+          class="fa fa-bars"
+        />
+      </button>
+      <div
+        class="sm:static sm:flex sm:pt-0"
+        id="nav-container"
+      >
+        <nav
+          class="text-gray-500 ml-2 sm:ml-0"
+        >
+          <ul
+            class="text-xs md:text-base sm:grid sm:grid-flow-col sm:gap-8"
+          >
+            <li
+              class="border-b border-gray-900 cursor-pointer rounded hover:bg-gray-800 sm:hover:bg-transparent sm:hover:border-green-500 sm:rounded-none"
+            >
+              <a
+                href="/"
+              >
+                Home
+              </a>
+            </li>
+            <li
+              class="mt-1 sm:mt-0 border-b border-gray-900 cursor-pointer rounded hover:bg-gray-800 sm:hover:bg-transparent sm:hover:border-green-500 sm:rounded-none"
+            >
+              <a
+                href="/group"
+              >
+                Media
+              </a>
+            </li>
+            <li
+              class="mt-1 sm:mt-0  border-b border-gray-900 cursor-pointer rounded hover:bg-gray-800 sm:hover:bg-transparent sm:hover:border-green-500 sm:rounded-none"
+            >
+              <a
+                href="/about"
+              >
+                About
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div
+        class="w-12 pl-2 sm:pl-0 sm:absolute sm:right-0"
+      >
+        <button
+          class="w-full border border-blue-500 bg-transparent text-blue-500 rounded-sm focus:outline-none hover:bg-blue-500 hover:text-gray-300"
+          data-testid="user-button"
+        >
+          USER
+        </button>
+      </div>
+    </div>
+    <div
+      class="block sm:hidden w-full h-10vh"
+    />
+  </div>
+  <div
+    class="flex flex-col md:flex-row h-90vh"
+  >
+    <div
+      class="md:hidden  w-full bg-gray-200 shadow-md"
+    >
+      <button
+        class="z-10 text-black w-12 h-12 hover:bg-gray-300 focus:outline-none"
+      >
+        <i
+          aria-hidden="true"
+          class="fa fa-bars"
+        />
+      </button>
+    </div>
+    <div
+      class="hidden w-full h-full md:block md:w-40 overflow-auto whitespace-no-wrap bg-gray-200 border shadow-inner"
+    >
+      <div
+        class="text-center pt-6"
+      >
+        <h2>
+          Dashboard
+        </h2>
+      </div>
+      <div
+        class="text-center pt-6"
+      >
+        <ul>
+          <li
+            class="block py-2 hover:bg-gray-300 hover:text-red-700"
+          >
+            <a
+              href="#home"
+            >
+              Organization
+            </a>
+          </li>
+          <li
+            class="block py-2 hover:bg-gray-300  hover:text-red-700"
+          >
+            <a
+              href="/group"
+            >
+              Groups
+            </a>
+          </li>
+          <li
+            class="block py-2 hover:bg-gray-300 hover:text-red-700"
+          >
+            <a
+              href="#home"
+            >
+              Roles
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+      class="w-full h-full"
+    >
+      <div
+        class="relative flex flex-col w-full h-full overflow-auto whitespace-no-wrap bg-gray-200"
+      />
+    </div>
+  </div>
+</DocumentFragment>
+`;

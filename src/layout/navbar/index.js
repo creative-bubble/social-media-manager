@@ -1,10 +1,10 @@
 import React from 'react';
 import './styles.css';
 import { Link } from 'react-router-dom';
+import { Hooks } from './hooks';
 
 function Navbar(){
-    const [isOpenNav, toggleNav] = React.useReducer(isOpenNav => !isOpenNav, false);
-    const [isOpenUser, toggleUser] = React.useReducer(isOpenUser => !isOpenUser, false);
+    const { isOpenNav, toggleNav, isOpenUser, toggleUser } = Hooks();
     return(
         <div className="bg-gray-900">
                 <div id="naver" className="fixed w-full h-10vh pt-4 text-gray-300 bg-gray-900 z-10 flex flex-row sm:justify-center sm:relative sm:w-9/12 sm:mx-auto">
@@ -44,7 +44,10 @@ function Navbar(){
                         {/* User button */}
                         <div className="w-12 pl-2 sm:pl-0 sm:absolute sm:right-0">
                             <button className="w-full border border-blue-500 bg-transparent text-blue-500 rounded-sm focus:outline-none hover:bg-blue-500 hover:text-gray-300"
-                                    onClick={toggleUser}>USER</button>
+                                    onClick={toggleUser}
+                                    data-testid="user-button">
+                                        USER
+                            </button>
 
                             {isOpenUser?
                                 <div className="w-48  mt-1 text-black bg-gray-100 flex flex-col rounded-md shadow-xl">

@@ -1,18 +1,19 @@
 import React, { useReducer, useState } from 'react';
 import Controls from '../main';
-import GroupController from '../../../controllers/group.js'
+import GroupController from '../../../controllers/group.js';
+import { Hooks } from './hooks';
 
 
 function Group(){
     const [isCreate,setCreate] = useReducer(isCreate =>  (!isCreate) , false);
     const [view, setView] = useState(false);
     const [viewData,setData] = useState([]);
-
+    const { inputs ,updateInputs } = Hooks();
     return(
         <>
         <Controls>
             <div className="w-6/12 ml-20 pt-10 border-b border-gray-500">
-                <h2 className="md:pl-6 pt-10  text-sm md:text-2xl lg:text-4xl">Groups</h2>
+                <h2 className="md:pl-6 pt-10  text-sm md:text-2xl lg:text-4xl">Group Controls</h2>
             </div>
             <div className="relative w-full md:w-6/12 md:ml-20">
                 <div className="flex flex-col md:pl-6 pt-16">
@@ -32,10 +33,14 @@ function Group(){
                     {/* for Creating Group */}
                     {isCreate?
                     <div className="flex flex-col md:pl-6 pt-10">
-                        <label>Name:</label>
-                        <input className="w-32 mt-1 border rounded focus:outline-none focus:border-blue-500" name="groupName"></input>
+                        <label htmlFor="groupName">Name:</label>
+                        <input className="w-32 mt-1 border rounded focus:outline-none focus:border-blue-500" 
+                               name="groupName"
+                               id="groupName"
+                               onChange={e => updateInputs('name', e.target.value)}>
+                        </input>
                         <button type="submit" className="w-32 mt-2 rounded-md text-gray-300 bg-blue-500 hover:bg-blue-400 focus:outline-none focus:shadow-inner"
-                                onClick={e => GroupController.postAddGroup(e.target)}>Create</button>
+                                onClick={() => GroupController.postAddGroup(inputs)}>Create</button>
                     </div>:''}
 
                     {/* get Group List */}
