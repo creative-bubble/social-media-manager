@@ -6,8 +6,8 @@ toast.configure();
 
 
 const GroupController = {
-    postAddGroup: function(inputs) {
-        fetch('https://mediacloneapi.herokuapp.com/group', {
+    postAddGroup: async function(inputs) {
+        return fetch('https://mediacloneapi.herokuapp.com/group', {
             method: 'POST', 
             headers:{'Content-Type': 'application/json'},
             body: JSON.stringify(inputs)
@@ -18,9 +18,9 @@ const GroupController = {
         .then(data => {
             console.log(data);
             if(data.type === "success")
-            toast.success(`${data.name} ${data.message}`, {autoClose: 3000});
-            else    
-            toast.info(`${data.message}`, {autoClose: 3000})
+                toast.success(`${data.name} ${data.message}`, {autoClose: 3000});
+            else if(data.error)   
+                toast.error(`${data.message}`, {autoClose: 3000})
         })
         .catch(err => {
             toast.error('Something Wrong', {autoClose: 3000});

@@ -40,3 +40,12 @@ exports.renderHook = (Hook) => {
     render(<WrapperHook />);
     return results;
 }
+
+
+exports.mockFetch = (data) => {
+    global.fetch = jest.fn(() => 
+        Promise.resolve({
+            json: () => Promise.resolve(data)
+        })
+    )
+} 
