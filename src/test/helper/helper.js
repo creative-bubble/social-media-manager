@@ -1,5 +1,5 @@
 import React from 'react';
-import { render } from '@testing-library/react';
+import { render, act } from '@testing-library/react';
 import { createMemoryHistory } from "history";
 import { Router } from "react-router";
 import { BrowserRouter } from 'react-router-dom';
@@ -49,3 +49,17 @@ exports.mockFetch = (data) => {
         })
     )
 } 
+
+
+exports.perform = async (cb, args, isAsync = false) => {
+    if(!isAsync){
+        act(() => {
+            cb(...args);
+        })
+    }
+    else{
+       return await act( async () => {
+            await cb(...args);
+        })
+    }
+};

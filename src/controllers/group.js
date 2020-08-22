@@ -16,7 +16,7 @@ const GroupController = {
             return res.json();
         })
         .then(data => {
-            console.log(data);
+            // console.log(data);
             if(data.type === "success")
                 toast.success(`${data.name} ${data.message}`, {autoClose: 3000});
             else if(data.error)   
@@ -26,8 +26,8 @@ const GroupController = {
             toast.error('Something Wrong', {autoClose: 3000});
         })
     },
-    getGroups: (cb) => {
-        fetch('https://mediacloneapi.herokuapp.com/group', {
+    getGroups: async (setViewData) => {
+        return fetch('https://mediacloneapi.herokuapp.com/group', {
             method: 'GET',
             headers: {'Content-type': 'application/json'},
         })
@@ -35,7 +35,7 @@ const GroupController = {
             return res.json()
         })
         .then(data => {
-            cb(data)
+            setViewData(data)
         })
         .catch(err => {
             console.log(err);

@@ -16,3 +16,22 @@ exports.postError = jest.fn(() => {
         type: "exist"
     };
 });
+
+// get getGroups
+
+exports.getSuccess = jest.fn(() => {
+    return [
+        {
+            id: 1,
+            name: 'TestGroup1',
+            createdAt: '2020-07-14T16:22:48.531Z',
+            updatedAt: '2020-07-14T16:22:48.531Z'
+        },
+        {
+            id: 2,
+            name: 'TestGroup2',
+            createdAt: '2020-07-14T16:22:48.531Z',
+            updatedAt: '2020-07-14T16:22:48.531Z'
+        },
+    ]
+});
