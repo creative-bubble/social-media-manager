@@ -50,20 +50,21 @@ describe('Group Controls', () => {
                 expect(spy).toHaveBeenCalledWith({ name: 'TestGroupName' });
             });
         });
-    });
+    
 
-    describe('View-GroupList', () => {
-        it('Click "Group List" should call getGroups controller', () => {
-            const spy = jest.spyOn(GroupController, 'getGroups').mockImplementation((setViewData) => 'mock');
-            const { getByText } = renderWith('/group');
-            //action
-            fireEvent.click(getByText('Group List'));
-            //assertions
-            getByText('Group List:');
-            getByText('Group Name');
-            expect(spy).toHaveBeenCalledTimes(1);
-            expect(typeof spy.mock.calls[0][0]).toEqual('function');   //called with setData hook
+        describe('GroupList', () => {
+            it('Click "Group List" should call getGroups controller', () => {
+                const spy = jest.spyOn(GroupController, 'getGroups').mockImplementation((setViewData) => 'mock');
+                const { getByText } = renderWith('/group');
+                //action
+                fireEvent.click(getByText('Group List'));
+                //assertions
+                getByText('Group List:');
+                getByText('Group Name');
+                expect(spy).toHaveBeenCalledTimes(1);
+                expect(typeof spy.mock.calls[0][0]).toEqual('function');   //called with setData hook
+            });
         });
-    });
+    }); 
 
 });
